@@ -13,10 +13,10 @@ $ python mouse_controller.py
 ```
 
 ### How to use
-↑ - Up
-↓ - Down
-→ - Right
-← - Left
-F9 - Left click
-F10 - Right click
-Esc - Exit
+`↑` - Up
+`↓` - Down
+`→` - Right
+`←` - Left
+`F9` - Left click
+`F10` - Right click
+`Esc` - Exit
