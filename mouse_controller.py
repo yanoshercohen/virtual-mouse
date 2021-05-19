@@ -5,7 +5,7 @@ from pynput.keyboard import Key, Listener
 step = 15
 
 #configuring the mouse control keys
-directions = {
+direction_keys = {
     Key.right: (step, 0),
     Key.left: (-step, 0),
     Key.up: (0, -step),
@@ -13,14 +13,14 @@ directions = {
 }
 
 #configuring the mouse click keys
-click_events = {Key.f9: "left", Key.f10: "right"}
+click_keys = {Key.f9: "left", Key.f10: "right"}
 
 def main():
     print("press ESC to exit.")
  
 def on_press(key):
-    pos = directions.get(key)
-    mouse_click = click_events.get(key)
+    pos = direction_keys.get(key)
+    mouse_click = click_keys.get(key)
     if pos:
         mouse.move(*pos, absolute=False, duration=0)
     elif mouse_click:
