@@ -17,6 +17,9 @@ click_keys = {Key.f9: "left", Key.f10: "right"}
 
 def main():
     print("press ESC to exit.")
+    # Collect events until released
+    with Listener(on_press=on_press, on_release=on_release) as listener:
+        listener.join()
  
 def on_press(key):
     pos = direction_keys.get(key)
@@ -35,7 +38,3 @@ def on_release(key):
  
 if __name__ == "__main__":
     main()
- 
-# Collect events until released
-with Listener(on_press=on_press, on_release=on_release) as listener:
-    listener.join()
